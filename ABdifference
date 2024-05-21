@@ -1,0 +1,9 @@
+A = input("Enter string A: ")
+B = input("Enter string B: ")
+set_A = set(A)
+set_B = set(B)
+distinct_chars = sorted(set_B - set_A)
+if distinct_chars:
+    print(''.join(distinct_chars))
+else:
+    print("-1")
