@@ -1,0 +1,7 @@
+def black_cells_count(n):
+    if n % 2 != 0:
+        return "n must be even"
+    else:
+        return (n // 2) * n
+n = 8 
+print("Number of black cells:", black_cells_count(n))
