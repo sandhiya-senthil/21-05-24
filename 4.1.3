@@ -1,0 +1,9 @@
+N = int(input("Enter the number of Fibonacci numbers to print: "))
+fibonacci_series = []
+a, b = 0, 1
+print("Fibonacci series of", N, "numbers:")
+for _ in range(N):
+    print(a, end=" ")
+    fibonacci_series.append(a)
+    a, b = b, a + b
+print("\nFibonacci series:", fibonacci_series)
