@@ -1,0 +1,9 @@
+n = int(input("Enter the number of terms: "))
+a, b = 0, 1
+fibonacci_series = []
+for _ in range(n):
+    fibonacci_series.append(a)
+    a, b = b, a + b
+print("Fibonacci series in reverse order:")
+for i in range(n - 1, -1, -1):
+    print(fibonacci_series[i], end=" ")
