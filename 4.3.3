@@ -1,0 +1,11 @@
+n = int(input("Enter the value of n: "))
+k = int(input("Enter the value of k: "))
+count = 0
+num = 1
+while count < n:
+    if '0' in str(num) or num % k == 0:
+        count += 1
+        if count == n:
+            print(f"The {n}-th number containing the digit {k} or divisible by {k} is: {num}")
+            break
+    num += 1
