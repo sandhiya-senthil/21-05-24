@@ -1,0 +1,14 @@
+current_time = input("Enter the current time in HH:MM format: ")
+hours, minutes = map(int, current_time.split(':'))
+hour_angle_per_minute = 360 / 12 / 60
+minute_angle_per_minute = 360 / 60
+initial_angle = abs((hours % 12) * 30 + minutes * 0.5 - minutes * 6)
+while True:
+    hours = (hours + 1) % 12
+    initial_angle += hour_angle_per_minute
+    if initial_angle >= 360:
+        initial_angle -= 360
+    if abs(initial_angle) <= 0.5:  # Precision
+        break
+time_in_minutes = hours * 60 + minutes
+print("Time when minute hand and hour hand coincide in the next one hour:", time_in_minutes)
